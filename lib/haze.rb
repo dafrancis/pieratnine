@@ -9,7 +9,7 @@ require 'sequel'
 module Haze
   extend self
 
-  DB = Sequel.connect 'comments.db'
+  DB = Sequel.connect ENV['DATABASE_URL'] || 'comments.db'
 
   DB.create_table? :comments do
     primary_key :id
