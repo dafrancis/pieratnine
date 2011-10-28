@@ -1,6 +1,6 @@
 source :rubygems
 gem 'sinatra'
-gem 'mime'
+gem 'mime-types'
 gem 'haml'
 gem 'builder'
 gem 'sequel'
