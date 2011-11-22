@@ -13,7 +13,7 @@ Libnotify.show(:body => ARGV[0], :summary => ARGV[1], :timeout => 2.5)</code></p
   ": > .irssi/fnotify ; tail -f .irssi/fnotify " |  \
 while read heading message; do                      \
   ruby /path/to/your/script/libnotify.rb "${heading}" "${message}";      \
-done)&</code></pre>
+done)&amp;</code></pre>
 <p>Now you're done! you've now got notifications when you get pinged on irc <br><img src="http://gyazo.com/40fbd18e663c0f6bbd5630e8a941ee68.png"><br>You can now blog about this and go to sleep</p>
 <p>Actually no I didn't explain why is the message in the summary and the heading in the body. Well funnily enough I found a strange little bug that I ccan't seem to understand. If the body text contained "&lt;" or "&gt;" it wouldn't show the message. I did think of stripping them out and just have the user show up as "@some_guy: Afal: here's a cool url http://leekspin.com/" but then I realised what if someone had their message as "&lt; herpson&gt; Afal: &lt;3 your blog post about the cornettos" I could strip them out but then that would get rid of the "&lt;" in the "&lt;3".</p>
 <p>I could probably have reported this bug and even tried to do a bug fix but as it was nearing midnight I decided there's probably not much difference with having the message first. And now I'm writing this past midnight instead of going to sleep after getting like an hours use of it and 2 people pinging me legitimately and not in the "TEST IS THIS WORKING TEST" way. Ug, I need some sleep.</p>
