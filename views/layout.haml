@@ -1,20 +1,11 @@
-!!! Strict
-%html{'xml:lang' => 'en', :xmlns => "http://www.w3.org/1999/xhtml"}
+!!! 5
+%html
   %head
-    %title= make_title
-    %meta{'http-equiv' => 'Content-Type', :content => 'text/html;charset=utf-8'}
-    %link{:rel => "stylesheet", :href => stylesheet_url,
-          :media => "screen",   :type => "text/css"}
-    %link{:rel => "alternate", :type => "application/atom+xml",
-          :href => "/feed", :title => "#{Haze.opt :title} (Atom 0.3)"}
+    %title Pier at Nine #{request.path_info == '/' ? '' : "- #{article.title}"}
+    %link{:rel=>"stylesheet", :media=>"screen", :href=>"/css/blog.css"}
+    %script{:type=>"text/javascript", :src=>"/js/jquery.min.js"}
+    %script{:type=>"text/javascript", :src=>"/js/jquery.timeago.js"}
+    %script{:type=>"text/javascript", :src=>"/js/blog.js"}
   %body
-    %ul#menu
-      - Haze.opt(:menu).each do |name,attrs|
-        %li
-          %a{:href => attrs.last, :title => attrs.first}= name
-    %h1
-      %a{:href => "/", :title => "Home"}= Haze.opt :title
-    #content
-      = yield
-    %p#footer
-      powered by <em><a href="http://github.com/madx/haze">Haze</a></em>
+    %img.logo{:src=>"/images/logo.png", :alt=>"Pier at Nine"}
+    = yield
