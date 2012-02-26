@@ -1,0 +1,9 @@
+<p>Bix is (yet another!) JavaScript library that focuses on routing. If you're used to <a href="http://www.sinatrarb.com/" target="_blank">Sinatra</a> style routing you should be comfortable using Bix.</p>
+<p>Bix focuses on the <a href="http://www.w3.org/TR/html5-author/history.html#history" target="_blank">HTML5 pushState()</a> instead of using "hashbang" urls. However if the browser does not have pushState it falls back to hasbang urls (this can be forced in the config). The reason for using Bix as the name is because someone suggested I should name it after a dead jazz musician to which he then suggested <a href="http://en.wikipedia.org/wiki/Bix_Beiderbecke" target="_blank">Bix Beiderbecke</a>.</p>
+<p>Bix is easy to use!</p>
+<pre class="prettyprint linenums">Bix({
+    '/': function () {
+        alert("Hello Bix!");
+    }
+}).run();</pre>
+<p>This demo page uses Bix so you can see it working!</p>

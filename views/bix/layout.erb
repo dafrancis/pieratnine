@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bix - A JavaScript Routing Library</title>
+    <link href='http://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|Carter+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css">
+    <link rel="stylesheet" href="/css/bix.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://raw.github.com/dafrancis/Bix/master/bix.min.js"></script>
+  <body>
+    <div class="container">
+      <h1 class="title">Bix</h1>
+      <h2 class="subtitle">A JavaScript Routing Library</h2>
+      <div class="row">
+        <div class="span3">
+          <p><a href="#!/">Home</a></p>
+          <p><a href="#!/how_to">How to use</a></p>
+          <p><a href="#!/download">Download</a></p>
+        </div>
+        <div id="main_area" class="span9">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>Bix was made by <a href="http://www.somethingafal.com" target="_blank">Dafydd Francis</a> (aka <a href="http://www.twitter.com/Afal" target="_blank">@Afal</a>)</p>
+    </footer>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js' type='text/javascript'/></script>
+    <script>prettyPrint()</script>
+    <script>
+      var render = function (url) {
+          $('#main_area').load('/bix/' + url, function () {
+              prettyPrint();
+          });
+      };
+      var bix = Bix({
+          '/': function () {
+              render('');
+          },
+          '/how_to': function (){
+              render('how_to');
+          },
+          '/download': function (){
+              render('download');
+          }
+      });
+      bix.config({root: "/bix/"});
+      bix.run();
+    </script>
+  </head>
+  </body>
+</html>

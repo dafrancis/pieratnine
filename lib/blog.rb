@@ -7,7 +7,7 @@ class Blog < Sinatra::Base
   set :root, File.expand_path('../../', __FILE__)
   set :articles, []
   set :app_file, __FILE__
-  set :haml, { :ugly=>true }
+  set :haml, :ugly=>true
 
   Dir.glob "#{root}/articles/*.md" do |file|
     meta, content = File.read(file).split("\n\n", 2)

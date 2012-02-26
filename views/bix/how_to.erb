@@ -1,0 +1,37 @@
+<p>Bix can route up your news site and plays nice with other libraries like jQuery!</p>
+<pre class="prettyprint linenums">var bix = Bix();
+
+bix.add('/', function () {
+    // Show Home page
+});
+
+// Use colons for parameters in urls.
+// These parameters then become the parameters in the function!
+bix.add('/article/:id', function (newsId) {
+    $.get('/article', { id: newsId }, function (data)
+        // Display on page
+    });
+});
+
+bix.run();</pre>
+<p>At this time Bix has some configuration options for you to customise</p>
+<pre class="prettyprint linenums">var bix = Bix();
+
+bix.config({
+    // Make a custom error handler
+    error : function (e) {
+        var error_cat = $('&lt;img&gt;').attr('src', 'http://httpcats.herokuapp.com/' + e.status);
+        $('#main').html(error_cat);
+    },
+    // Set the root of your application. (The default is '/')
+    root: 'my_awesome_app',
+    // force Bix to use hashbang urls (Default is false)
+    forceHash: false,
+    // Choose wether you want Bix to make the urls show as hashbangs or just plain hashes (Default is true)
+    hashBang: true
+});
+
+// Why not define the functions elsewhere in your code?
+bix.add('/', MyJsApp.page.home);
+
+bix.run();</pre>

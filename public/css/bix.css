@@ -1,0 +1,37 @@
+body {
+  background: #208c20;
+  background-image: url("/images/image1.jpg"), url("/images/image2.jpg");
+  background-repeat: repeat-x, repeat;
+  font-family: 'Carter One', cursive;
+}
+.title {
+  font-family: 'Annie Use Your Telescope', cursive;
+  font-size: 200px;
+  padding: 50px;
+  margin: 40px;
+  color: orange;
+  text-shadow: 1px 1px 1px #000;
+}
+.subtitle {
+  padding: 20px;
+  color: #BBB;
+  font-style: italic;
+  text-shadow: -1px 0 #888, 0 1px #888, 1px 0 #888, 0 -1px #888;
+}
+p {
+  font-family: 'Carter One', cursive;
+}
+.nav-list .active > a, .nav-list .active > a:hover {
+  background: orange;
+}
+.nav > li > a {
+  color: orange;
+}
+footer {
+  width: 800px;
+  margin: auto;
+  color: #AAA;
+}
+a {
+    color: navy;
+}
