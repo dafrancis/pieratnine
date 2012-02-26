@@ -1,4 +1,4 @@
-title: I made Bix! Oh wait no on cares :sadface:
+title: I made Bix! Oh wait no one cares (sadface)
 date: 2012-02-26
 
 So that JavaScript eh? Such a new cool language that everyone is using because of the nodes and the jqueries. Everyone loves the JavaScripts to put on the websites and making the HTML5. Screw python or ruby (or whatever java I don't know) JavaScript is the new hotness. JavaScript is webscale. I don't know what webscale is but you've got to use it or you're not cool.
