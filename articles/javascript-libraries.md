@@ -14,3 +14,5 @@ So I'm releasing it. Pretty sure no one else has done this yet. Oh wait no turns
 I'm not angry.. ok I'm a little bit angry. I was hoping that I've done something unique that could be useful but it turns out I just reinvented the wheel; and probably pretty shoddily if that.
 
 I'm kinda reminded of a quote from some programmer from long time ago *"programming is rather thankless. you see your works become replaced by superior works in a year. unable to run at all in a few more."* although with "a year before" instead of "in a year". I just wish that I haven't wasted my time :\
+
+![This is exactly how I feel right now](http://i.imgur.com/DWGeQ.jpg)
