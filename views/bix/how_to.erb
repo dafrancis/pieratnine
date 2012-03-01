@@ -8,7 +8,7 @@ bix.add('/', function () {
 // Use colons for parameters in urls.
 // These parameters then become the parameters in the function!
 bix.add('/article/:id', function (newsId) {
-    $.get('/article', { id: newsId }, function (data)
+    $.get('/article', { id: newsId }, function (data) {
         // Display on page
     });
 });
