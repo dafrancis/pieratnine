@@ -37,3 +37,11 @@ header time {
     display: block;
     margin: auto;
 }
+
+footer {
+    text-align: center;
+    width: 500px;
+    font-size: 10px;
+    color: gray;
+    margin: auto;
+}
