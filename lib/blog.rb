@@ -2,6 +2,7 @@ require 'sinatra/base'
 require 'ostruct'
 require 'time'
 require 'yaml'
+require 'json'
 
 class Blog < Sinatra::Base
   set :root, File.expand_path('../../', __FILE__)
@@ -28,5 +29,26 @@ class Blog < Sinatra::Base
 
   get '/' do
     haml :index
+  end
+
+  get '/rss' do
+    content_type 'application/rss+xml'
+    haml :rss, :format => :xhtml, :escape_html => true, :layout => false
+  end
+
+  get '/json' do
+    content_type 'application/json'
+    json = settings.articles.map do |article|
+      {
+        :title => article.title,
+        :date => article.date,
+        :slug => article.slug
+      }
+    end.to_json
+    if params[:callback]
+      "#{params[:callback]}(#{json})"
+    else
+      json
+    end
   end
 end

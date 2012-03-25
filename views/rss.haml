@@ -1,0 +1,12 @@
+!!! XML
+%rss{:version => "2.0", "xmlns:atom" => "http://www.w3.org/2005/Atom"}
+    %channel
+        %title Pier at Nine
+        %link http://www.pieratnine.com/
+        %description Blog about Code by Dafydd "Afal" Francis
+        <atom:link href="http://www.pieratnine.com/rss" rel="self" type="application/rss+xml" />
+        -settings.articles.each do |article|
+            %item
+                %title= article.title
+                %link http://www.pieratnine.com/#{article.slug}
+                %description= markdown article.content
