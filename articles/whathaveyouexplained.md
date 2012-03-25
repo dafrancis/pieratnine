@@ -1,5 +1,6 @@
 title: What Have You, Business and Gay Babies
 date: 2011-11-6
+summary: In which I moan about how my creation got ruined on day one
 
 So earlier this week I relased one of my "secret" projects [What Have You](http://www.andwhathave.eu/). Today I've finally gone round to finishing off hacking the fixes and basic features I wanted it to have by the time I released it. The test run is over and I can now *officially* announce that I have finished the very basics with this project. In the future I might add some more features or fix the really hacky stuff in there or even give it a proper style rather than one I got from a website that gives free templates.
 

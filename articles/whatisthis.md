@@ -1,5 +1,6 @@
 title: So what is this again?
 date: 2011-10-29
+summary: In which I explain (vaguely) why I made another blog for projects I'm working on
 
 So yeah, I've decided to keep a blog about the personal projects I'm working on. These things are kinda back burner things and will probably be neglected in a while until someone goes "Hey. What was that secret project you were working on? Have you finished it yet?" at which that point I'll look back at the code sigh at young me and the poor programming mistakes I did and rewrite the whole thing to the point I was at last wondering why did I stop here and then remember that the only person who would ever use this would be me.
 

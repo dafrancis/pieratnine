@@ -42,7 +42,8 @@ class Blog < Sinatra::Base
       {
         :title => article.title,
         :date => article.date,
-        :slug => article.slug
+        :slug => article.slug,
+        :summary => article.summary
       }
     end.to_json
     if params[:callback]

@@ -1,5 +1,6 @@
 title: Semicolons are *NOT* optional
 date: 2012-03-23
+summary: In which I use strawmen to moan at articles which seemingly encourage bad code
 
 I recently read a small article about how [Semicolons in JavaScript are optional](http://mislav.uniqpath.com/2010/05/semicolons/). Hoo boy here we go.
 

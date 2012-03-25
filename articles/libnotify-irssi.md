@@ -1,5 +1,6 @@
 title: Using libnotify with irssi
 date: 2011-11-22
+summary: In which I make a Linux version of a irc plugin made for people who irc on a Mac
 
 Remember last time when I mentioned IRC and that I use it a lot? Well I actually do use it a lot. In fact on the list of things that I do on the internet irc is a huge part of that. The other part of that is trying to word a bug you just found in terms which are not too generic that google ignores it, for example "libnotify bug when body contains < or >".
 

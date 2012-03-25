@@ -1,5 +1,6 @@
 title: This blog post is about Turtles
 date: 2011-11-2
+summary: In which I don't really say much but post a screenshot of a semi-working web service
 
 Omg I'm on the way to getting the fist iteration of [andwhathave.eu](http://www.andwhathave.eu/) on the way. Just look at this:
 
