@@ -4,10 +4,13 @@
     %title Pier at Nine #{request.path_info == '/' ? '' : "- #{article.title}"}
     %link{:rel=>"stylesheet", :media=>"screen", :href=>"/css/blog.css"}
     %script{:type=>"text/javascript", :src=>"/js/jquery.min.js"}
-    %script{:type=>"text/javascript", :src=>"/js/jquery.timeago.js"}
+    %script{:type=>"text/javascript", :src=>"/js/sugar.js"}
+    %script{:type=>"text/javascript", :src=>"/js/jquery.dimensions.js"}
+    %script{:type=>"text/javascript", :src=>"/js/jquery.tooltip.js"}
     %script{:type=>"text/javascript", :src=>"/js/blog.js"}
   %body
     %img.logo{:src=>"/images/logo.png", :alt=>"Pier at Nine"}
     = yield
     %footer
-      2012 Dafydd Francis (afal AT somethingafal DOT com)
+      2012 Dafydd Francis
+      %a{:href => "http://www.somethingafal.com"} Something Afal

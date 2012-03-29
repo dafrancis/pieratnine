@@ -1,2 +1,6 @@
--settings.articles.each do |article|
-  =haml :post, :locals => {:article => article}
+%ul#menu
+  -settings.articles.each do |article|
+    %a.article{:href => article.slug, :title => article.summary}
+      %li
+        %h1= article.title
+        %p.date= article.date
