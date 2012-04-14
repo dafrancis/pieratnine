@@ -46,10 +46,5 @@ class Blog < Sinatra::Base
         :summary => article.summary
       }
     end.to_json
-    if params[:callback]
-      "#{params[:callback]}(#{json})"
-    else
-      json
-    end
   end
 end
