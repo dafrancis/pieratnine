@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>Canvas</title>
+        <meta charset="utf-8">
+        <style>
+html {
+    font-family: Helvetica;
+    color: #FFF;
+    background: #222;
+    text-shadow: 0.1em 0.1em #333
+}
+
+h1{
+    font-size: 72px; margin: 5px;
+}
+
+canvas {
+    background: white;
+    margin: auto;
+    text-align: center;
+}
+
+#container {
+    width: 640px;
+    margin: auto;
+    text-align: center;
+}
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h1>MMORPG Sim</h1>
+            <canvas id="my_canvas" width="640" height="480"></canvas>
+        </div>
+        <script src="juicy.js"></script>
+<script>
+(function () {
+var state = "one";
+var score = 0;
+var hint = "Press the numbers on the screen to continue!";
+var congrats = ["Well done!", "Good Job!", "Keep going!", "Wow!", "You leveled up!", "Ducks are a silly animal"];
+var TweetButton = Juicy.Base.extend({
+    width: 75,
+    height: 50,
+    init: function (x, y) {
+        this.x = x;
+        this.y = y;
+    },
+    draw: function () {
+        if (this.isHover()) {
+            Juicy.ctx.fillStyle = "#ffbf00";
+        } else {
+            Juicy.ctx.fillStyle = "rgb(29, 150, 28)";
+        }
+        Juicy.ctx.fillRect(this.x, this.y, this.width, this.height);
+        Juicy.drawText("Tweet!!!", this.x + 10, this.y + 30, "black", "bold 16px Comic Sans MS");
+    },
+    change: function () {
+        if (this.isClicked()) {
+            location.href = "https://twitter.com/share?hashtags=fuckthisjam&related=Afal&text=I%27ve+scored+" + score + "+points+on+mmorpg+simulator%21%21%21&url=http://www.pieratnine.com/mmosim/";
+        }
+    }
+});
+
+Juicy.audioLoad({
+    hog: "Handofg0d.ogg"
+});
+
+Juicy.run(function () {
+    var K_ONE = 49, K_TWO = 50;
+    this.drawText(state === "one" ? "1" : "2", 250, 240, "black", "bold 200px Comic Sans MS");
+    if (Juicy.Key.isDown(K_ONE) && !Juicy.Key.isDown(K_TWO) && state === "one") {
+        score += 1;
+        state = "two";
+        hint = congrats[~~(Math.random() * congrats.length)];
+    }
+    if (!Juicy.Key.isDown(K_ONE) && Juicy.Key.isDown(K_TWO) && state === "two") {
+        score += 1;
+        state = "one";
+        hint = congrats[~~(Math.random() * congrats.length)];
+    }
+    if (score > 20) {
+        this.drawText("Score: " + score, 30, 30, "black", "bold 20px Comic Sans MS");
+    }
+    if (score > 120) {
+        var button = new TweetButton(550, 20);
+        button.step();
+    }
+    this.drawText(hint, 50, 400, "black", "bold 20px Comic Sans MS");
+    this.sounds.hog.play();
+});
+}).call(this);
+</script>
+    </body>
+</html>
