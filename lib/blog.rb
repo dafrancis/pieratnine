@@ -47,4 +47,8 @@ class Blog < Sinatra::Base
       }
     end.to_json
   end
+
+  get '/mmosim/?' do
+    redirect '/mmosim/index.html'
+  end
 end
