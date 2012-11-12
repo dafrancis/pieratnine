@@ -51,4 +51,8 @@ class Blog < Sinatra::Base
   get '/mmosim/?' do
     redirect '/mmosim/index.html'
   end
+
+  get '/MineSim/?' do
+    redirect '/MineSim/index.html'
+  end
 end
