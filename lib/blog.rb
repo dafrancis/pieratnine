@@ -55,4 +55,8 @@ class Blog < Sinatra::Base
   get '/MineSim/?' do
     redirect '/MineSim/index.html'
   end
+
+  get '/SpaceHam/?' do
+    redirect '/SpaceHam/index.html'
+  end
 end
