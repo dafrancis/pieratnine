@@ -1,4 +1,4 @@
-title: Benadict Cumberbatch Google Chrome Extension
+title: Benedict Cumberbatch Google Chrome Extension
 date: 2013-09-08
 summary: In which I get annoyed at google because reasons.
 
