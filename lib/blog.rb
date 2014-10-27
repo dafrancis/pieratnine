@@ -38,7 +38,7 @@ class Blog < Sinatra::Base
 
   get '/json' do
     content_type 'application/json'
-    json = settings.articles.map do |article|
+    settings.articles.map do |article|
       {
         :title => article.title,
         :date => article.date,
